@@ -17,9 +17,9 @@ export async function POST(req: NextRequest) {
     // Crie o prompt com base no idioma selecionado
     let promptText: string;
     if (language === "portugues") {
-      promptText = "Descreva esta imagem de forma concisa e útil para um texto alternativo (alt text) em português. Foco nos elementos principais e no contexto da imagem. Comece a descrição com 'Imagem de' ou 'Uma imagem de'. Se houver texto, transcreva-o fielmente e mencione que é texto na imagem. Limite a 135 caracteres.";
+      promptText = "Descreva esta imagem de forma concisa e útil para um texto alternativo (alt text) em português. Foco nos elementos principais e no contexto da imagem. Comece a descrição com 'Imagem de' ou 'Uma imagem de'. Se houver texto, transcreva-o fielmente e mencione que é texto na imagem. Limite a 125 caracteres.";
     } else { // espanhol
-      promptText = "Describe esta imagen de forma concisa y útil para un texto alternativo (alt text) en español. Concéntrate en los elementos principales y el contexto de la imagen. Empieza la descripción con 'Imagen de' o 'Una imagen de'. Si hay texto, transcríbelo fielmente y menciona que es texto en la imagen. Limite a 135 caracteres.";
+      promptText = "Describe esta imagen de forma concisa y útil para un texto alternativo (alt text) en español. Concéntrate en los elementos principales y el contexto de la imagen. Empieza la descripción con 'Imagen de' o 'Una imagen de'. Si hay texto, transcríbelo fielmente y menciona que es texto en la imagen. Limite a 125 caracteres.";
     }
 
     const result = await model.generateContent([
